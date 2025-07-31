@@ -14,31 +14,53 @@ Richライブラリを用いた美しいフォーマットのテキストと、G
 
 ## 🛠️ セットアップ
 
-1.  リポジトリをクローンします:
+### 1. リポジトリをクローンします:
 
     ```bash
     git clone https://github.com/yourusername/rich-gemini-cli.git
     cd rich-gemini-cli
     ```
 
-2.  依存関係をインストールします:
+### 2. 依存関係のインストール:
 
-  
-    ```bash
-    uv sync
-    ```
+```bash
+# uvを使用（推奨）
+uv sync
+
+# または pipを使用
+pip install -r requirements.txt
+```
+
+### 3. Gemini APIキーの取得:
+
+1. [Google AI Studio](https://makersuite.google.com/app/apikey) にアクセス
+2. Googleアカウントでログイン
+3. APIキーを作成
+4. 作成されたAPIキーをコピー
+
+### 4. 環境変数の設定:
+
+```bash
+# .envファイルを作成
+cp env.example .env
+
+# .envファイルを編集してAPIキーを設定
+echo "GEMINI_API_KEY=your_actual_api_key_here" > .env
+```
+
+### 5. アプリケーションの実行:
+
+```bash
+uv run python main.py
+```
 
 
-3.  Gemini APIキーを環境変数に設定します:
-
-    ```bash
-    export GEMINI_API_KEY='your-api-key'
-    ```
-
-## 🚀 使い方
+## 🚀 使い方（標準）
 
 CLIを実行します:
 
 ```bash
 uv run python gemini.py
 ```
+
+---
