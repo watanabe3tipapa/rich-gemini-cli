@@ -100,6 +100,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    git remote add origin git@github.com:watanabe3tipapa/rich-gemini-cli.git
-git branch -M main
-git push -u origin main
