@@ -1,0 +1,11 @@
+[project]
+name = "rich-gemini-cli"
+version = "0.1.0"
+description = "A command-line interface for Gemini AI with Rich formatting"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rich>=14.1.0",
+]
+[project.scripts]
+gemini-cli = "gemini:main"

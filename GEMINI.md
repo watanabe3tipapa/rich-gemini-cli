@@ -1,0 +1,1 @@
+If you are given a task for which you do not have a tool, consider writing a python script as a tool to get the job done, whenever possible. My system has uv installed so you can use uv run command to execute the script.
