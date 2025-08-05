@@ -4,22 +4,27 @@ Richライブラリを用いた美しいフォーマットのテキストと、G
 
 ## ✨ 特徴
 
-  - Gemini AIとの対話型チャット
-  - Richによるフォーマットを適用したコマンドラインインターフェース
+- Gemini AIとの対話型チャット
+- Richによるフォーマットを適用したコマンドラインインターフェース
+- 設定可能なメッセージ長制限と履歴管理
+- 包括的なログ機能
+- APIキー形式の検証
+- エラーハンドリングの強化
 
 ## 📋 必要条件
 
-  - Python 3.13+
-  - Richライブラリ
+- Python 3.10+
+- Richライブラリ
+- python-dotenvライブラリ
 
 ## 🛠️ セットアップ
 
 ### 1. リポジトリをクローンします:
 
-    ```bash
-    git clone https://github.com/yourusername/rich-gemini-cli.git
-    cd rich-gemini-cli
-    ```
+```bash
+git clone https://github.com/yourusername/rich-gemini-cli.git
+cd rich-gemini-cli
+```
 
 ### 2. 依存関係のインストール:
 
@@ -28,7 +33,7 @@ Richライブラリを用いた美しいフォーマットのテキストと、G
 uv sync
 
 # または pipを使用
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ### 3. Gemini APIキーの取得:
@@ -45,22 +50,57 @@ pip install -r requirements.txt
 cp env.example .env
 
 # .envファイルを編集してAPIキーを設定
-echo "GEMINI_API_KEY=your_actual_api_key_here" > .env
+# GEMINI_API_KEY=your_actual_api_key_here
 ```
 
 ### 5. アプリケーションの実行:
 
 ```bash
+# メインエントリーポイント
+uv run python main.py
+
+# または直接実行
+uv run python gemini.py
+
+# インストール後はコマンドとしても実行可能
+gemini-cli
+```
+
+## 🚀 使い方
+
+### 基本的な使用方法
+
+CLIを実行すると対話型チャットが開始されます:
+
+```bash
 uv run python main.py
 ```
 
+### 利用可能なコマンド
 
-## 🚀 使い方（標準）
+- `/exit` または `exit`, `quit`, `/quit`: アプリケーションを終了
+- `/clear`: チャット履歴をクリア
+- `/help` または `help`: ヘルプメッセージを表示
 
-CLIを実行します:
+### 設定オプション
 
-```bash
-uv run python gemini.py
-```
+`.env`ファイルで以下の設定を変更できます:
+
+- `MAX_MESSAGE_LENGTH`: 1回のメッセージの最大文字数（デフォルト: 1000）
+- `MAX_HISTORY_LENGTH`: 保持する履歴の最大数（デフォルト: 100）
+- `LOG_LEVEL`: ログレベル（DEBUG, INFO, WARNING, ERROR）
+
+## 📝 ログ機能
+
+アプリケーションは`gemini_cli.log`ファイルにログを出力します。デバッグやトラブルシューティングに活用してください。
+
+## 🔧 トラブルシューティング
+
+### APIキーエラー
+- APIキーが正しく設定されているか確認
+- APIキーが'AIza'で始まり、30文字以上であることを確認
+
+### ログの確認
+- `gemini_cli.log`ファイルでエラーの詳細を確認
 
 ---

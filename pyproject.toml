@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "rich>=14.1.0",
+    "python-dotenv>=1.0.0",
 ]
 [project.scripts]
 gemini-cli = "gemini:main"
