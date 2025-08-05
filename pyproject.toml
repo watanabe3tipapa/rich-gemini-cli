@@ -1,11 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "rich-gemini-cli"
-version = "0.1.0"
-description = "A command-line interface for Gemini AI with Rich formatting"
+version = "0.2.0"
+description = "A beautiful command-line interface for Gemini AI with Rich formatting and comprehensive features"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = [
-    "rich>=14.1.0",
+license = "MIT"
+authors = [
+    {name = "Rich Gemini CLI", email = "example@example.com"},
 ]
+keywords = ["gemini", "ai", "cli", "rich", "chat"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "flake8>=6.0.0",
+]
+
 [project.scripts]
 gemini-cli = "gemini:main"
+rich-gemini = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/rich-gemini-cli"
+Repository = "https://github.com/yourusername/rich-gemini-cli"
+Issues = "https://github.com/yourusername/rich-gemini-cli/issues"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
