@@ -41,7 +41,7 @@ Richライブラリを活用した洗練されたコンソール表示と、Goog
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/yourusername/rich-gemini-cli.git
+git clone https://github.com/watanabe3tipapa/rich-gemini-cli.git
 cd rich-gemini-cli
 
 # 依存関係のインストール
@@ -55,7 +55,7 @@ uv run python main.py
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/yourusername/rich-gemini-cli.git
+git clone https://github.com/watanabe3tipapa/rich-gemini-cli.git
 cd rich-gemini-cli
 
 # 開発モードでインストール
@@ -296,9 +296,9 @@ pytest
 
 ## 📞 サポート
 
-- 🐛 **バグ報告**: [Issues](https://github.com/yourusername/rich-gemini-cli/issues)
-- 💡 **機能要望**: [Discussions](https://github.com/yourusername/rich-gemini-cli/discussions)
-- 📧 **直接連絡**: example@example.com
+- 🐛 **バグ報告**: [Issues](https://github.com/watanabe3tipapa/rich-gemini-cli/issues)
+- 💡 **機能要望**: [Discussions](https://github.com/watanabe3tipapa/rich-gemini-cli/discussions)
+- 📧 **直接連絡**: 休止中
 
 ---
 
@@ -306,6 +306,6 @@ pytest
 
 **Rich Gemini CLI で、AI との対話をより豊かに！** 🚀
 
-[⭐ Star this repo](https://github.com/yourusername/rich-gemini-cli) | [🍴 Fork](https://github.com/yourusername/rich-gemini-cli/fork) | [📝 Report Issues](https://github.com/yourusername/rich-gemini-cli/issues)
+[⭐ Star this repo](https://github.com/watanabe3tipapa/rich-gemini-cli) | [🍴 Fork](https://github.com/watanabe3tipapa/rich-gemini-cli/fork) | [📝 Report Issues](https://github.com/watanabe3tipapa/rich-gemini-cli/issues)
 
 </div>
